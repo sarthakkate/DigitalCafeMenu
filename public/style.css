@@ -1,30 +1,273 @@
-/* body {
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f9f9f9;
+/* CSS styles for the Cafe Menu Web App */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #F5F5DC;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    background: #FFFFFF;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.cafe-name {
+    text-align: center;
+    font-family: 'Georgia', serif;
+    font-size: 2.5em;
+    color: #8B4513;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
 }
 
 h1, h2, h3 {
-  color: #333;
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px;
 }
 
-.category {
-  margin-top: 30px;
+h1 {
+    font-size: 1.8em;
+    color: #696969;
+    margin-bottom: 25px;
 }
 
-.item {
-  margin-bottom: 10px;
+h2 {
+    border-bottom: 2px solid #D2B48C;
+    padding-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.4em;
+    color: #5C4033;
 }
 
-button {
-  margin-left: 5px;
-  padding: 5px 10px;
-  font-size: 16px;
+h3 {
+    font-size: 1.2em;
+    color: #5C4033;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-.qty {
-  margin: 0 8px;
-  font-weight: bold;
-  font-size: 16px;
+.menu-section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #E0D8C0;
+    border-radius: 8px;
+    background-color: #FFFAF0;
 }
- */
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #F0EAD6;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #333;
+    flex-grow: 1;
+}
+
+.item-price {
+    font-size: 1em;
+    font-weight: bold;
+    color: #5C4033;
+    margin-right: 15px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    background-color: #E6E0D4;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.quantity-controls button {
+    background-color: #A0522D;
+    color: white;
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    font-size: 1.4em;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    margin: 0 2px;
+}
+
+.quantity-controls button:hover {
+    background-color: #8B4513;
+    transform: translateY(-1px);
+}
+
+.quantity-controls button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.quantity {
+    font-size: 1.1em;
+    font-weight: bold;
+    width: 30px;
+    text-align: center;
+    color: #333;
+}
+
+.total-section {
+    text-align: right;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 2px solid #D2B48C;
+    color: #A0522D;
+}
+
+.notes-section {
+    margin-top: 25px;
+}
+
+.notes-section label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #5C4033;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #D2B48C;
+    border-radius: 8px;
+    font-size: 1em;
+    resize: vertical;
+    box-sizing: border-box;
+    background-color: #FFFAF0;
+}
+
+.place-order-btn, .attention-btn {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.place-order-btn {
+    background-color: #4CAF50;
+}
+
+.place-order-btn:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+.place-order-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.attention-btn {
+    background-color: #FF6347;
+    margin-bottom: 20px;
+}
+
+.attention-btn:hover {
+    background-color: #E5533D;
+    transform: translateY(-2px);
+}
+
+.attention-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-contact {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #E0D8C0;
+    font-size: 1em;
+    color: #5C4033;
+}
+
+.whatsapp-contact a {
+    color: #25D366;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp-contact a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    .container {
+        padding: 15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .cafe-name {
+        font-size: 2em;
+    }
+    h1 {
+        font-size: 1.6em;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .item-name, .item-price {
+        margin-bottom: 5px;
+    }
+    .quantity-controls {
+        width: 100%;
+        justify-content: center;
+    }
+    .quantity-controls button {
+        width: 40px;
+        height: 40px;
+        font-size: 1.6em;
+    }
+    .quantity {
+        width: 40px;
+    }
+}
